@@ -121,7 +121,7 @@ public class OrderRepository {
 //        return count;
     }
     public Integer getOrdersLeftAfterGivenTimeByPartnerId(String time,String partnerId) {
-    int numerictime=Integer.parseInt(time.substring(0,2))-60+Integer.parseInt(time.substring(3,5));
+       int numerictime=Integer.parseInt(time.substring(0,2))*60+Integer.parseInt(time.substring(3,5));
 
        int c=0;
        for (String id:orderDeliveryPartnerHashMap.get(partnerId)){
